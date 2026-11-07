@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Permai - Reservasi Villa Modern</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-house-chimney-window"></i> Villa Permai
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#villas">Pilihan Vila</a></li>
+                <li><a href="#booking">Pemesanan</a></li>
+                <li><a href="#history">Riwayat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Temukan Liburan Impian Anda di <span>Villa Permai</span></h1>
+            <p>Sewa vila eksklusif dengan kenyamanan terbaik, pemandangan indah, dan suasana menyenangkan.</p>
+            <a href="#villas" class="btn btn-primary">Jelajahi Vila</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Pencarian & Filter -->
+        <section class="search-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Cari nama vila atau lokasi...">
+            </div>
+            <div class="filter-box">
+                <select id="priceFilter">
+                    <option value="all">Semua Harga</option>
+                    <option value="low">Di bawah Rp 2.000.000</option>
+                    <option value="mid">Rp 2.000.000 - Rp 3.000.000</option>
+                    <option value="high">Di atas Rp 3.000.000</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Section Pilihan Vila -->
+        <section id="villas" class="villas-section">
+            <h2 class="section-title">Pilihan Vila Populer</h2>
+            <div class="villa-grid" id="villaGrid">
+                <!-- Kartu vila di-render oleh script.js -->
+            </div>
+        </section>
+
+        <!-- Section Form Pemesanan -->
+        <section id="booking" class="booking-section">
+            <h2 class="section-title">Formulir Pemesanan Vila</h2>
+            <div class="booking-card">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="fullName"><i class="fa-solid fa-user"></i> Nama Lengkap</label>
+                        <input type="text" id="fullName" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                            <input type="email" id="email" placeholder="contoh@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fa-solid fa-phone"></i> No. WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="081234567890" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="villaSelect"><i class="fa-solid fa-house"></i> Pilih Vila</label>
+                            <select id="villaSelect" required>
+                                <option value="" disabled selected>-- Pilih Vila --</option>
+                                <option value="1">Villa Rosewood - Puncak (Rp 1.500.000 / malam)</option>
+                                <option value="2">Villa Orchid - Lembang (Rp 2.200.000 / malam)</option>
+                                <option value="3">Villa Sakura - Ubud (Rp 3.500.000 / malam)</option>
+                                <option value="4">Villa Jasmine - Batu, Malang (Rp 1.800.000 / malam)</option>
+                                <option value="5">Villa Lavender - Bedugul, Bali (Rp 2.800.000 / malam)</option>
+                                <option value="6">Villa Bamboo - Jogja (Rp 1.200.000 / malam)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests"><i class="fa-solid fa-users"></i> Jumlah Tamu</label>
+                            <input type="number" id="guests" min="1" max="15" value="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn"><i class="fa-solid fa-calendar-check"></i> Tanggal Check-in</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut"><i class="fa-solid fa-calendar-xmark"></i> Tanggal Check-out</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+
+                    <!-- Perhitungan Harga Otomatis -->
+                    <div class="price-summary" id="priceSummary">
+                        <h3>Rincian Biaya</h3>
+                        <div class="summary-item">
+                            <span>Lama Menginap:</span>
+                            <strong id="summaryNights">0 Malam</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Harga per Malam:</span>
+                            <strong id="summaryRate">Rp 0</strong>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total Harga:</span>
+                            <strong id="summaryTotal">Rp 0</strong>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="btnCheck" class="btn btn-secondary">
+                            <i class="fa-solid fa-circle-check"></i> Cek Ketersediaan
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Sekarang
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section Riwayat Pemesanan (LocalStorage) -->
+        <section id="history" class="history-section">
+            <h2 class="section-title">Riwayat Pemesanan Anda</h2>
+            <div id="historyList" class="history-list">
+                <!-- Data tersimpan dimuat di sini -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Pop-up Foto Interior Vila -->
+    <div id="villaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Villa Permai. All Rights Reserved. UTS Pemrograman Web.</p>
+    </footer>
+
+    <!-- Pemanggilan JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

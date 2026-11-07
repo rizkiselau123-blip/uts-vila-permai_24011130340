@@ -1,0 +1,17 @@
+# Website Reservasi Villa Permai (UTS Pemrograman Web)
+
+Aplikasi web pemesanan dan reservasi vila interaktif berbasis HTML5, CSS3, dan JavaScript murni.
+
+## Fitur Utama
+1. **Header & Responsive Navigation Bar**
+2. **Koleksi 6 Pilihan Vila** (Foto cover, interior, lokasi, harga, & fasilitas)
+3. **Modal Pop-up Galeri Interior & Detail Fasilitas**
+4. **Fitur Pencarian & Filter Harga Realtime**
+5. **Formulir Pemesanan Lengkap** (Drop-down vila, jumlah tamu, tanggal check-in/out)
+6. **Kalkulator Biaya Otomatis**
+7. **Cek Ketersediaan & Pesan Sekarang**
+8. **Penyimpanan LocalStorage** (Riwayat reservasi tersimpan di browser)
+
+## Cara Menjalankan Project
+1. Pastikan folder `assets/` sudah berisi file gambar `.jpg` yang sesuai.
+2. Buka berkas `index.html` dengan klik dua kali (double-click) atau lewat ekstensi Live Server di VS Code.
