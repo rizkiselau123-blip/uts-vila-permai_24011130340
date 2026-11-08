@@ -1,18 +1,36 @@
-# Website Reservasi Villa Permai (UTS Pemrograman Web)
+# Tugas Teknologi Web - Villa Permai
 
-Aplikasi web pemesanan dan reservasi vila interaktif berbasis HTML5, CSS3, dan JavaScript murni (Vanilla JS).
+## Informasi Mahasiswa
+* **Nama:** [muhammad rizki]
+* **NIM:** [24011130340]
+* **Nama Repository:** `tugas_teknologi_web`
 
-## Fitur Utama
-1. **Header & Responsive Navigation Bar**
-2. **Koleksi 6 Pilihan Vila** (Lengkap dengan foto, lokasi, harga, dan fasilitas)
-3. **Modal Pop-up Foto Interior** (Melihat foto bagian dalam vila seperti ruang tamu, kamar tidur, dapur, dan kamar mandi)
-4. **Fitur Pencarian & Filter Harga Realtime**
-5. **Formulir Pemesanan Lengkap** (Drop-down pilihan vila, jumlah tamu, tanggal check-in/check-out)
-6. **Kalkulator Biaya Otomatis**
-7. **Cek Ketersediaan & Pesan Sekarang**
-8. **Penyimpanan LocalStorage** (Data pesanan tetap tersimpan walaupun browser di-refresh)
+## Deskripsi Singkat Fitur
+Proyek ini merupakan halaman web antarmuka (*front-end*) penyewaan akomodasi bernama **Villa Permai**. Halaman web ini menyediakan tampilan yang modern dan responsif bagi pengguna untuk mencari, memfilter harga, dan menjelajahi katalog pilihan vila populer.
 
-## Cara Menjalankan Project
-1. Buka folder `uts-vila-permai` di VS Code.
-2. Buka berkas `index.html`.
-3. Klik kanan pada area kode `index.html` lalu pilih **Open with Live Server** (atau klik 2 kali file `index.html` dari File Explorer laptop Anda).
+## Cara Menjalankan Halaman Web
+1. Unduh (*download*) atau *clone* repositori ini ke komputer Anda.
+2. Buka folder proyek **`tugas_teknologi_web`**.
+3. Cari file **`index.html`**.
+4. Klik dua kali pada file `index.html` atau buka menggunakan peramban web (*browser*) seperti Google Chrome, Mozilla Firefox, atau Microsoft Edge.
+
+## Daftar Fitur
+
+### Fitur yang Sudah Selesai
+* [x] **Hero Banner Section:** Tampilan header utama dengan latar gambar vila, judul promosi, deskripsi, dan tombol navigasi ("Jelajahi Vila").
+* [x] **Fitur Pencarian:** Bilah input pencarian (*search bar*) berdasarkan nama vila atau lokasi.
+* [x] **Filter Harga:** Dropdown opsi pemfilteran vila berdasarkan kategori harga.
+* [x] **Galeri Vila Populer:** Grid kartu (*cards*) vila populer lengkap dengan gambar pratinjau.
+* [x] **Desain Tata Letak (Layout):** Antarmuka visual yang modern dengan skema warna yang konsisten.
+
+### Fitur yang Belum Selesai
+* [ ] **Fungsionalitas Pencarian & Filter (JavaScript):** Interaktivitas pencarian dan penyaringan data secara dinamis/real-time.
+* [ ] **Halaman Detail Vila:** Halaman spesifik saat salah satu vila populer diklik.
+* [ ] **Sistem Reservasi / Pemesanan:** Form pemesanan dan integrasi backend untuk transaksi.
+
+## Tangkapan Layar (Screenshot)
+Berikut adalah tampilan antarmuka dari halaman utama (`index.html`):
+
+![Tangkapan Layar Halaman Utama Villa Permai](./screenshot.png)
+
+*(Catatan: Simpan gambar screenshot halaman web Anda dengan nama file `screenshot.png` di folder yang sama dengan file `README.md` ini).*

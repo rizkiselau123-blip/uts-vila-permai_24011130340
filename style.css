@@ -1,3 +1,4 @@
+
 :root {
     --primary-pink: #ec4899;
     --primary-dark: #be185d;
@@ -10,27 +11,44 @@
     --radius: 16px;
 }
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
+    width: 100%;
+    min-width: 0;
     background-color: #fff5f8;
     color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 .container {
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
     position: sticky;
@@ -57,6 +75,7 @@ body {
     display: flex;
     list-style: none;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -70,22 +89,36 @@ body {
     color: var(--primary-pink);
 }
 
-/* Hero Section */
+/* HERO */
 .hero {
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.75), rgba(190, 24, 93, 0.75)), 
-                url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-    height: 55vh;
+    width: 100%;
+    min-height: 350px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(236, 72, 153, 0.75),
+            rgba(190, 24, 93, 0.75)
+        ),
+        url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80')
+        center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-    padding: 0 20px;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    line-height: 1.3;
 }
 
 .hero-content p {
@@ -94,9 +127,10 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
-/* Tombol */
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -126,16 +160,18 @@ body {
     background-color: #fbcfe8;
 }
 
-/* Search Section */
+/* SEARCH */
 .search-section {
+    width: 100%;
     display: flex;
     gap: 15px;
-    margin: 30px 0 20px 0;
+    margin: 30px 0 20px;
     flex-wrap: wrap;
 }
 
 .search-box {
     flex: 2;
+    min-width: 0;
     display: flex;
     align-items: center;
     background: var(--white);
@@ -148,11 +184,13 @@ body {
     border: none;
     outline: none;
     width: 100%;
+    min-width: 0;
     margin-left: 10px;
     font-size: 1rem;
 }
 
 .filter-box select {
+    width: 100%;
     padding: 12px 20px;
     border-radius: var(--radius);
     border: 1px solid var(--pink-light);
@@ -163,22 +201,25 @@ body {
     cursor: pointer;
 }
 
-/* Card Grid */
+/* VILLA GRID */
 .section-title {
     font-size: 1.8rem;
     color: var(--primary-dark);
-    margin: 30px 0 20px 0;
+    margin: 30px 0 20px;
     text-align: center;
 }
 
 .villa-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
     margin-bottom: 40px;
 }
 
 .villa-card {
+    width: 100%;
+    min-width: 0;
     background: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
@@ -235,8 +276,10 @@ body {
     margin-bottom: 15px;
 }
 
-/* Booking Section */
+/* BOOKING */
 .booking-card {
+    width: 100%;
+    min-width: 0;
     background: var(--white);
     padding: 30px;
     border-radius: var(--radius);
@@ -248,6 +291,7 @@ body {
     margin-bottom: 18px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .form-group label {
@@ -255,7 +299,10 @@ body {
     font-weight: 600;
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
     padding: 10px 14px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
@@ -263,16 +310,18 @@ body {
     outline: none;
 }
 
-.form-group input:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group select:focus {
     border-color: var(--primary-pink);
 }
 
 .form-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
+/* PRICE SUMMARY */
 .price-summary {
     background-color: var(--pink-bg);
     padding: 18px;
@@ -289,6 +338,7 @@ body {
 .summary-item {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     margin-bottom: 6px;
 }
 
@@ -299,17 +349,20 @@ body {
     color: var(--primary-dark);
 }
 
+/* BUTTON GROUP */
 .button-group {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* History Section */
+/* HISTORY */
 .history-section {
     margin-bottom: 50px;
 }
 
 .history-card {
+    width: 100%;
     background: var(--white);
     padding: 18px;
     border-radius: 12px;
@@ -321,7 +374,7 @@ body {
     border-left: 5px solid var(--primary-pink);
 }
 
-/* Modal Pop-up Foto Interior */
+/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -392,19 +445,222 @@ body {
     font-size: 0.9rem;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: var(--primary-dark);
     color: var(--white);
 }
 
-@media (max-width: 768px) {
+/* ==================================
+   TABLET
+================================== */
+
+@media screen and (max-width: 900px) {
+
+    .villa-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ==================================
+   HP / MOBILE
+================================== */
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Navbar */
+    .nav-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        min-height: 280px;
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Search */
+    .search-section {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 25px 0;
+    }
+
+    .search-box {
+        width: 100%;
+        flex: none;
+    }
+
+    .filter-box,
+    .filter-box select {
+        width: 100%;
+    }
+
+    /* Villa */
+    .villa-grid {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .villa-card {
+        width: 100%;
+    }
+
+    .villa-card img {
+        width: 100%;
+        height: 210px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Booking */
+    .booking-card {
+        width: 100%;
+        padding: 18px;
+    }
+
     .form-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .button-group {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+
+    /* Riwayat */
+    .history-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 18px;
+        margin: 5% auto;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .facility-list {
         grid-template-columns: 1fr;
     }
-    .button-group {
-        flex-direction: column;
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        padding: 20px 12px;
+        font-size: 13px;
+    }
+}
+
+/* ==================================
+   HP KECIL
+================================== */
+
+@media screen and (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 21px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .villa-info {
+        padding: 15px;
+    }
+
+    .booking-card {
+        padding: 15px;
     }
 }
