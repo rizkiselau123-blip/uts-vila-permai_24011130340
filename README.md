@@ -31,6 +31,6 @@ Proyek ini merupakan halaman web antarmuka (*front-end*) penyewaan akomodasi ber
 ## Tangkapan Layar (Screenshot)
 Berikut adalah tampilan antarmuka dari halaman utama (`index.html`):
 
-![Tangkapan Layar Halaman Utama Villa Permai](./screenshot.png)
+![Tangkapan Layar Halaman Utama Villa Permai](./tugas_teknologi_web.png)
 
 *(Catatan: Simpan gambar screenshot halaman web Anda dengan nama file `screenshot.png` di folder yang sama dengan file `README.md` ini).*
