@@ -29,8 +29,4 @@ Proyek ini merupakan halaman web antarmuka (*front-end*) penyewaan akomodasi ber
 * [ ] **Sistem Reservasi / Pemesanan:** Form pemesanan dan integrasi backend untuk transaksi.
 
 ## Tangkapan Layar (Screenshot)
-Berikut adalah tampilan antarmuka dari halaman utama (`index.html`):
-
-![Tangkapan Layar Halaman Utama Villa Permai](./tugas_teknologi_web.png)
-
-*(Catatan: Simpan gambar screenshot halaman web Anda dengan nama file `screenshot.png` di folder yang sama dengan file `README.md` ini).*
+![Tampilan Utama Website Vila Permai](assets/tugas_teknologi_web.png)
